@@ -1,19 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
+<!-- Task 2
+1. Rapihkan form ini
+2. Gunakan method POST -->
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form Nilai Siswa</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-</head>
+<?php
+    include_once 'header.php'
+?>
 
-<body>
-
-    <form class="form-horizontal w-75 mt-5 mx-auto p-4 border shadow-sm" method="POST" action="nilai_siswa.php">
-        <h2>Form Nilai</h2>
-        <hr />
+<div class="container my-5">
+    <h1 class="text-center mb-4">Form Nilai</h1>
+    <form class="form-horizontal w-75 mt-5 mx-auto p-4 border shadow-sm" method="POST" action="data_nilai.php">
         <div class="container px-3">
             <div class="form-group row mb-3">
                 <label for="nama_lengkap" class="col-4 col-form-label">Nama Lengkap</label>
@@ -26,9 +21,9 @@
                 <div class="col-8">
                     <select id="matkul" name="matkul" required="required" class="form-select">
                         <option value="">----- Pilih Mata Kuliah -----</option>
-                        <option value="ddp">Dasar Dasar Pemrograman</option>
-                        <option value="pweb">Pemrograman Web</option>
-                        <option value="statistik">Statistika dan Probabilitas</option>
+                        <option value="Dasar Dasar Pemrograman">Dasar Dasar Pemrograman</option>
+                        <option value="Pemrograman Web">Pemrograman Web</option>
+                        <option value="Statistika dan Probabilistas">Statistika dan Probabilitas</option>
                     </select>
                 </div>
             </div>
@@ -52,12 +47,13 @@
             </div>
             <div class="form-group row mb-3">
                 <div class="offset-4 col-8">
-                    <input type="submit" name="proses" value="Submit" class="btn btn-primary">
+                    <input type="submit" name="submit" value="Submit" class="btn btn-primary">
                 </div>
             </div>
         </div>
     </form>
+</div>
 
-</body>
-
-</html>
+<?php
+    include_once 'footer.php'
+?>
